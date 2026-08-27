@@ -9,7 +9,7 @@
 // @run-at      document-start
 //
 // @author      Oxyru
-// @description Blocks most brainrot content
+// @description Blocks most brainrot content.
 // ==/UserScript==
 
 (() => {
@@ -140,13 +140,10 @@
     }
 
     const observer = new MutationObserver(mutations => {
-
         for (const mutation of mutations) {
-
             for (const node of mutation.addedNodes) {
-
                 if (node.nodeType === Node.TEXT_NODE) {
-                        removeBrainrot(node.parentElement);
+                    removeBrainrot(node.parentElement);
                 } else if (node.nodeType === Node.ELEMENT_NODE) {
                     scanElement(node);
                 }
