@@ -146,12 +146,8 @@
             for (const node of mutation.addedNodes) {
 
                 if (node.nodeType === Node.TEXT_NODE) {
-
                         removeBrainrot(node.parentElement);
-                    }
-
                 } else if (node.nodeType === Node.ELEMENT_NODE) {
-
                     scanElement(node);
                 }
             }
@@ -159,7 +155,6 @@
     });
 
     function start() {
-
         if (!document.body) {
             requestAnimationFrame(start);
             return;
@@ -172,7 +167,5 @@
             subtree: true
         });
     }
-
     start();
-
 })();
