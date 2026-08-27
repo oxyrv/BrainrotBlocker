@@ -107,7 +107,7 @@
         if (!container) return;
 
         console.log(
-            '[Brainrot Filter] Suppression :',
+            '[Brainrot Filter] Deleting :',
             container
         );
 
@@ -128,7 +128,6 @@
 
         while (node = walker.nextNode()) {
                 matches.push(node);
-            }
         }
 
         for (const textNode of matches) {
